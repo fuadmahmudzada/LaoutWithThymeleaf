@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head th:replace="fragments/fragments :: head(pageTitle='Events')"></head>
+<body>
+<header th:replace="fragments/fragments :: header"></header>
+<div class="container my-5">
+    <h1 class="text-center mb-4">Upcoming Events</h1>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card mb-4">
+                <img src="https://via.placeholder.com/600x400" class="card-img-top" alt="Event 1">
+                <div class="card-body">
+                    <h5 class="card-title">Event 1</h5>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed finibus leo vel mauris facilisis, vel finibus magna fringilla.</p>
+                    <p class="card-text"><strong>Date:</strong> May 1, 2023</p>
+                    <p class="card-text"><strong>Location:</strong> New York City</p>
+                    <a href="#" class="btn btn-primary">Register Now</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card mb-4">
+                <img src="https://via.placeholder.com/600x400" class="card-img-top" alt="Event 2">
+                <div class="card-body">
+                    <h5 class="card-title">Event 2</h5>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed finibus leo vel mauris facilisis, vel finibus magna fringilla.</p>
+                    <p class="card-text"><strong>Date:</strong> June 15, 2023</p>
+                    <p class="card-text"><strong>Location:</strong> Los Angeles</p>
+                    <a href="#" class="btn btn-primary">Register Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer th:replace="fragments/fragments :: footer (type='none')"></footer>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org/">
+<head th:replace="fragments/fragments :: head(pageTitle='Home')"></head>
+
+
+<body>
+<header th:replace="fragments/fragments.html :: header"></header>
+<main>
+<div class="container my-5">
+    <h1>Welcome to My Website</h1>
+    <p>Our services.</p>
+    <div class="container-fluid">
+        <div class="row">
+
+            <div class="col-4" th:each="product : ${producstArray}">
+                <div class="card">
+                    <img th:src="@{'/image/' + ${product.getImage()}}" class="card-img-top" alt="Teacher 1" style="object-fit: cover">
+                    <div class="card-body">
+                        <h5 class="card-title" th:text="${product.getName()}">John Doe</h5>
+                        <p class="card-text" th:text="${product.getType()}"></p>
+                        <p class="card-text" th:text="${product.getPrice()}">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed finibus leo
+                            vel mauris facilisis, vel finibus magna fringilla.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</main>
+<footer >
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <div th:replace="fragments/fragments :: footer(type='tag')" ></div>
+</footer>
+
+</body>
+</html>

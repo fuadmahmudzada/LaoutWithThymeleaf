@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head th:replace="fragments/fragments :: head(pageTitle='News')"></head>
+<body>
+<header th:replace="fragments/fragments :: header"></header>
+<div class="container my-5">
+    <h1 class="text-center mb-4">Latest News</h1>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card mb-4">
+                <img src="https://via.placeholder.com/600x400" class="card-img-top" alt="News 1">
+                <div class="card-body">
+                    <h5 class="card-title">Groundbreaking Discovery</h5>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed finibus leo vel mauris facilisis, vel finibus magna fringilla.</p>
+                    <a href="#" class="btn btn-primary">Read More</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card mb-4">
+                <img src="https://via.placeholder.com/600x400" class="card-img-top" alt="News 2">
+                <div class="card-body">
+                    <h5 class="card-title">New Partnership Announced</h5>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed finibus leo vel mauris facilisis, vel finibus magna fringilla.</p>
+                    <a href="#" class="btn btn-primary">Read More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer th:replace="fragments/fragments :: footer (type='none')"></footer>
+</body>
+</html>

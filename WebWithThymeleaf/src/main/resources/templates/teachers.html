@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head th:replace="fragments/fragments :: head(pageTitle='Teachers')"></head>
+<body>
+<header th:replace="fragments/fragments :: header"></header>
+<div class="container my-5">
+    <h1 class="text-center mb-4">Our Teachers</h1>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-4" th:each="teacher: ${teachersArray}">
+                <div class="card">
+                    <img th:src="@{'/image/' + ${teacher.getImage()}}" class="card-img-top" alt="Teacher 1">
+                    <div class="card-body">
+                        <h5 class="card-title" th:text="${teacher.getName()}">John Doe</h5>
+                        <p class="card-text" th:text="${teacher.getType()}">Subject: Mathematics</p>
+                        <p class="card-text" th:text="${teacher.getPrice()}">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed finibus leo
+                            vel mauris facilisis, vel finibus magna fringilla.</p>
+                    </div>
+                </div>
+            </div>
+            <!--        <div class="col-md-4">-->
+            <!--            <div class="card">-->
+            <!--                <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="Teacher 2">-->
+            <!--                <div class="card-body">-->
+            <!--                    <h5 class="card-title">Jane Smith</h5>-->
+            <!--                    <p class="card-text">Subject: English Literature</p>-->
+            <!--                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed finibus leo vel mauris facilisis, vel finibus magna fringilla.</p>-->
+            <!--                </div>-->
+            <!--            </div>-->
+            <!--        </div>-->
+            <!--        <div class="col-md-4">-->
+            <!--            <div class="card">-->
+            <!--                <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="Teacher 3">-->
+            <!--                <div class="card-body">-->
+            <!--                    <h5 class="card-title">Michael Johnson</h5>-->
+            <!--                    <p class="card-text">Subject: Science</p>-->
+            <!--                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed finibus leo vel mauris facilisis, vel finibus magna fringilla.</p>-->
+            <!--                </div>-->
+            <!--            </div>-->
+            <!--        </div>-->
+        </div>
+    </div>
+</div>
+<footer th:replace="fragments/fragments :: footer (type='none')"></footer>
+</body>
+</html>
